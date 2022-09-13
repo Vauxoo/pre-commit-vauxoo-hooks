@@ -20,7 +20,7 @@ def read(*names, **kwargs):
 
 setup(
     name="pre-commit-vauxoo-hooks",
-    version="0.0.1",
+    version="0.0.2",
     license="LGPL-3.0-or-later",
     description="pre-commit-vauxoo-hooks to use in pre-commit-config.yml files",
     long_description="{}".format(
