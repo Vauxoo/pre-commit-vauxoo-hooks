@@ -4,6 +4,8 @@
 # pylint: disable=print-used
 
 import json
+import os
+import platform
 import re
 import sys
 
@@ -39,7 +41,16 @@ def check_deactivate(fname_deactivate, instance_types=None):
             res, msg = pgsanity.check_string(sql)
         except OSError as oserr:
             res = False
-            print("%s - The package to install is '%s'" % (oserr, "postgresql*-devel"))
+            if platform.system() == "Darwin":
+                # MACOSX
+                msg = "'brew install postgresql'"
+            elif os.name == "posix":
+                # LINUX
+                msg = "'apt install -y libecpg-dev'"
+            else:
+                # WINDOWS
+                msg = "Install postgresql and add to PATH the PGBIN folder"
+            print("%s - %s" % (oserr, msg))
             # Return instead of continue because the package is not installed
             return res
         if not res:
