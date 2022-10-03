@@ -1,3 +1,14 @@
+===================
+PROJECT DEPECREATED
+===================
+
+It was deprecated in pro of 
+ - https://github.com/Vauxoo/pre-commit-vauxoo/tree/main/src/pre_commit_vauxoo/hooks
+    - More info:
+       - https://github.com/Vauxoo/pre-commit-vauxoo-hooks/issues/4
+
+
+
 ========
 Overview
 ========
@@ -5,6 +16,9 @@ Overview
 .. image:: https://www.vauxoo.com/logo.png
    :alt: Vauxoo
    :target: https://www.vauxoo.com/
+
+
+
 
 
 Vauxoo's custom pre-commit hooks
